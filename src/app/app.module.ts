@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component'; //Referencia o local que o novo componente estpa
+import { ServerComponent } from './server/server.component';
+import { ServersComponent } from './servers/servers.component'; //Referencia o local que o novo componente estpa
 
 @NgModule({ //define quais funcionalidades o app deve conter e usar
   declarations: [
     AppComponent,
-    ServerComponent //sem a declaração, é como se o método não existisse / como uma assinatura
+    ServerComponent, //sem a declaração, é como se o método não existisse / como uma assinatura
+    ServersComponent 
   ],
   imports: [
     BrowserModule
