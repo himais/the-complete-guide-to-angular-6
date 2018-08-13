@@ -1,5 +1,11 @@
 <p>
   yay servers works!
 </p>
-
-<app-server></app-server>
+<button 
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"> <!-- seta o valor diretamente na propriedade da tag -->
+  Set new server
+</button>
+<p>
+  <app-server></app-server>
+</p>

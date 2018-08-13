@@ -5,13 +5,18 @@ import { Component, OnInit } from '@angular/core';
   //selector: '[app-servers]', //selector pelo atributo
   //selector: '.app-servers', //selector pela classe
   //templateUrl: './servers.component.html',
-  template: `<p> yay servers works! </p>
-              <app-server></app-server>`, //não usar quando for mais de 3 linhas
+  /* template: `<p> yay servers works! </p>
+              <app-server></app-server>`, //não usar quando for mais de 3 linhas */
+  templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
+  allowNewServer = false;
+  constructor() { 
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit() {
   }
