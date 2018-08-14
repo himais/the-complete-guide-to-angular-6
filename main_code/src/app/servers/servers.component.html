@@ -23,8 +23,11 @@
   -->
   Set new server
 </button>
-<p>
+<!-- <p>
   {{ serverMessage }}
+</p> -->
+<p *ngIf="serverWasCreated">
+  Server was created! Server is {{serverName}}
 </p>
 <p>
   <app-server></app-server>
