@@ -10,4 +10,26 @@
       </ol>
     </div>
   </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="onClickToDisplayMsg()">Display Details</button>
+    </div>
+
+    <p *ngIf="showSecretMessage">
+      Hey! Keep it secret.
+    </p>
+  
+    <hr>
+
+    <p *ngIf="clicksLog.length > 0">Click log: </p>
+    <p *ngFor="let clickTimestamp of clicksLog; let i = index">
+      <span
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : white}" 
+        [ngClass]="{'text-white': i >= 4}">
+        Timestamp: {{clickTimestamp}}
+        Index: {{i}}
+      </span>
+    </p>
+  </div>
 </div>
