@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverMessage = 'No server was created!';
+  serverName = '';
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -24,6 +25,10 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverMessage = 'Server was created!';
+  }
+
+  onUpdateServerName(event: Event){
+    this.serverName = (<HTMLInputElement>event.target).value; //informa ao ts que o tipo é html input element para pegar o value do target
   }
 
 }

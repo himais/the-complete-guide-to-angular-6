@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -9,10 +10,11 @@ import { ServersComponent } from './servers/servers.component'; //Referencia o l
   declarations: [
     AppComponent,
     ServerComponent, //sem a declaração, é como se o método não existisse / como uma assinatura
-    ServersComponent 
+    ServersComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] //serves as root component / avisa qual componente é o principal no start da aplicação
