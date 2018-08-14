@@ -4,9 +4,12 @@
 <input 
   class="form-control"
   (input)="onUpdateServerName($event)"> <!-- $event variável reservada para ser usada dentro de templates, que carrega o obj do evento -->
-  <p>
-    {{ serverName }}
-  </p>
+<input 
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>
+  {{ serverName }}
+</p>
 <button 
   class="btn btn-primary"
   [disabled]="!allowNewServer"
