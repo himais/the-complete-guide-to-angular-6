@@ -8,7 +8,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 export class FormComponent implements OnInit {
   newServerName = '';
   newServerContent = '';
-  @Output() serverCreated = new EventEmitter<{ serverName: string, serverType: string, serverContent: string }>();
+  @Output('onServerCreated') serverCreated = new EventEmitter<{ serverName: string, serverType: string, serverContent: string }>();
 
   constructor() { }
 
