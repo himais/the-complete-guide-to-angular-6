@@ -1,0 +1,8 @@
+p {
+    color: blue;
+} 
+/*
+  O angular encapsula os estilos de cada componente
+  É por este motivo que os outros parágrafos da página não ficam azuis também
+  (eles são de outros componentes
+*/
