@@ -1,13 +1,14 @@
 <p>Add new Servers or blueprints!</p>
 <label>Server Name</label>
 <!-- <input type="text" class="form-control" [(ngModel)]="newServerName"> 
-  Para recuperar o valor do input, não é necessário o ngmodel
+  Para recuperar o valor do input, não é necessário o ngmodel (2way data binding)
   Pode-se utilizar a referência local, que é visível somente dentro do template e passa para
   o .ts o elemento inteiro (input)
 -->
 <input type="text" class="form-control" #serverNameInput>
 <label>Server Content</label>
-<input type="text" class="form-control" [(ngModel)]="newServerContent">
+<!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> -->
+<input type="text" class="form-control" #serverContentInput>
 <br>
 <button class="btn btn-primary" (click)="onAddServer(serverNameInput)">Add Server</button>
 <button class="btn btn-primary" (click)="onAddBlueprint(serverNameInput)">Add Server Blueprint</button>

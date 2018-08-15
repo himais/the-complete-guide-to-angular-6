@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -6,9 +6,11 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  newServerName = '';
-  newServerContent = '';
+  // newServerName = '';
+  // newServerContent = '';
   @Output('onServerCreated') serverCreated = new EventEmitter<{ serverName: string, serverType: string, serverContent: string }>();
+  @ViewChild('serverContentInput') serverContentElement: ElementRef; /* @ViewChild permite capturar o elemento no template que
+                                                                      contém a referência */
 
   constructor() { }
 
@@ -19,7 +21,7 @@ export class FormComponent implements OnInit {
     this.serverCreated.emit({
       serverName: nameInput.value,
       serverType: 'server',
-      serverContent: this.newServerContent
+      serverContent: this.serverContentElement.nativeElement.value
     });
   }
 
@@ -27,7 +29,7 @@ export class FormComponent implements OnInit {
     this.serverCreated.emit({
       serverName: nameInput.value,
       serverType: 'blueprint',
-      serverContent: this.newServerContent
+      serverContent: this.serverContentElement.nativeElement.value
     });
   }
 
