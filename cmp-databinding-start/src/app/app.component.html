@@ -9,7 +9,17 @@
     <div class="col-xs-12">
       <app-server 
       *ngFor="let element of serverElements"
-      [serverElement]="element"></app-server>
+      [serverElement]="element">
+      <!-- Por padrão, o angular ignora todo o conteúdo colocado entre as tags de um componente criado
+           Para projetar conteúdo em um componente, utiliza-se o ng-content, 
+           que pega todo o conteúdo entre as tags e aloca no lugar dentro do componente
+           *melhor que usar {{}} e etc., pois não há escape dos caracteres
+      -->
+        <p>
+          <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+          <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+        </p>    
+      </app-server>
     </div>
   </div>
 </div>
