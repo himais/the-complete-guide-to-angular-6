@@ -23,7 +23,7 @@
     <hr>
 
     <p *ngIf="clicksLog.length > 0">Click log: </p>
-    <p *ngFor="let clickTimestamp of clicksLog; let i = index">
+    <p *ngFor="let clickTimestamp of clicksLog; let i = index"> <!-- Itera nos elementos do array clickLog e captura o index na var i -->
       <span
         [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'white'}" 
         [ngClass]="{'text-white': i >= 4}">
