@@ -7,14 +7,14 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   @Output('onGameStarted') gameStarted = new EventEmitter<number>();
-  counter: number = 0;
+  counter: Number = 0;
   interval;
 
   onStopGame() {
     clearInterval(this.interval);
   }
 
-  sendEvent(){
+  sendEvent() {
     this.interval = setInterval(() => {
       console.log(this.counter);
       this.gameStarted.emit(this.counter);
