@@ -5,5 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
+  numbers: number[] = [];
+
+  onGameStarted(counter: number) {
+    this.numbers.push(counter);
+  }
 }

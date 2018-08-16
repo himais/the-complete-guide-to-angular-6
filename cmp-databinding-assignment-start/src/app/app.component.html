@@ -8,10 +8,21 @@
         <li>When starting the game, an event (holding a incrementing number) should get emitted each second (ref = setInterval())</li>
         <li>The event should be listenable from outside the component</li>
         <li>When stopping the game, no more events should get emitted (clearInterval(ref))</li>
-        <li>A new Odd component should get created for every odd number emitted, the same should happen for the Even Component (on even numbers)</li>
+        <li>A new Odd component should get created for every odd number emitted, the same should happen for the Even Component
+          (on even numbers)</li>
         <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (onGameStarted)="onGameStarted($event)"></app-game-control>
+      <div *ngFor="let number of numbers">
+        <app-odd *ngIf="number % 2 != 0" [gameCounter]="number" style="color: aqua"></app-odd>
+        <app-even *ngIf="number % 2 === 0" [gameCounter]="number" style="color: green"></app-even>
+      </div>
     </div>
   </div>
 </div>
