@@ -15,7 +15,7 @@
            que pega todo o conteúdo entre as tags e aloca no lugar dentro do componente
            *melhor que usar {{}} e etc., pois não há escape dos caracteres
       -->
-        <p>
+        <p #paragraph>
           <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
           <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
         </p>    
