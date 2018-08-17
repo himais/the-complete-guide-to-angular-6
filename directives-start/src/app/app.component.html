@@ -12,7 +12,11 @@
         <p>Only odd</p>
       </ng-template>
       <p appBasicHighlight> Color me with a basic directive! </p>
-      <p appBetterHighlight> Color me with a better directive! </p>
+      <!-- bind em directives: 
+        - quando é string, o valor deve estar entre aspas OU a propriedade sem []
+        - [defaultColor]="'red'" e defaultColor="red" fazem a mesma coisa
+        - bind com o nome da directive: apenas quando o input está com alias  -->
+      <p appBetterHighlight [defaultColor]="'red'" [appBetterHighlight]="'blue'"> Color me with a better directive! </p>
     </div>
   </div>
 </div>
