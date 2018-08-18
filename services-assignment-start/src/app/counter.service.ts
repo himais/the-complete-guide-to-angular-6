@@ -4,11 +4,11 @@ export class CounterService {
 
     addActiveToInactive() {
         this.activeToInactive++;
-        console.log('Ativos para inativos: ' + this.activeToInactive);
+        console.log('active => inactive: ' + this.activeToInactive);
     }
 
     addInactiveToActive() {
         this.inativeToActive++;
-        console.log('Inativos para ativos: ' + this.inativeToActive);
+        console.log('inactive => active: ' + this.inativeToActive);
     }
 }
