@@ -19,7 +19,9 @@ export class AccountComponent {
 
   onSetTo(status: string) {
     //this.statusChanged.emit({ id: this.id, newStatus: status });
-    this.accountService.updateAccount(this.id, status);
     //this.logService.log('A server status changed, new status: ' + status);
+
+    this.accountService.updateAccount(this.id, status);
+    this.accountService.statusUpdated.emit(status); // sender
   }
 }

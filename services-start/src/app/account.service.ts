@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, EventEmitter } from "@angular/core";
 import { LogService } from "./log.service";
 
 /* Por padrão, services não precisam de nenhuma anotação - são uma classe comum
@@ -20,6 +20,8 @@ export class AccountService {
             status: 'unknown'
         }
     ];
+
+    statusUpdated = new EventEmitter<string>(); // config 
 
     constructor(private logService: LogService) { }
 
