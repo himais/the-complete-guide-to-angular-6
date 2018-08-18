@@ -13,11 +13,13 @@ export class AccountComponent {
   @Input() id: number;
   //@Output() statusChanged = new EventEmitter<{ id: number, newStatus: string }>();
 
-  constructor(private logService: LogService, private accountService: AccountService) { }
+  /* Removendo o log service do construtor pois será injetado dentro do AccountService */
+  // constructor(private logService: LogService, private accountService: AccountService) { }
+  constructor(private accountService: AccountService) { }
 
   onSetTo(status: string) {
     //this.statusChanged.emit({ id: this.id, newStatus: status });
     this.accountService.updateAccount(this.id, status);
-    this.logService.log('A server status changed, new status: ' + status);
+    //this.logService.log('A server status changed, new status: ' + status);
   }
 }
