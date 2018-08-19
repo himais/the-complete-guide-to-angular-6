@@ -2,14 +2,19 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <ul class="nav nav-tabs">
-        <li role="presentation" class="active">
+        <!-- 
+           - routerLinkActive="active" -> informa classe que deve ser adicionada quando a rota estiver
+           ativa
+           - [routerLinkActiveOptions]="{exact: true}" -> (property binding pois recebe um obj) :  =define como path principal
+        -->
+        <li role="presentation" class="active" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <a routerLink="/">Home</a>
         </li>
         <li role="presentation">
-          <a routerLink="/servers">Servers</a>
+          <a routerLink="/servers" routerLinkActive="active">Servers</a>
         </li>
         <li role="presentation">
-          <a routerLink="/users">Users</a>
+          <a routerLink="/users" routerLinkActive="active">Users</a>
         </li>
       </ul>
     </div>
