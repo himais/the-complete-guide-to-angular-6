@@ -13,9 +13,13 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <button class="btn btn-primary" (click)="reloadPage()">Realod page</button>
-    <app-edit-server></app-edit-server>
-    <hr>
-    <!-- <app-server></app-server> -->
+    <router-outlet></router-outlet>
+    <!--
+      Removido para carregar os componentes dinamicamente pelas rotas 
+      <button class="btn btn-primary" (click)="reloadPage()">Realod page</button>
+      <app-edit-server></app-edit-server>
+      <hr>
+      <app-server></app-server> 
+  -->
   </div>
 </div>
