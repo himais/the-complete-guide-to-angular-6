@@ -6,7 +6,7 @@
         [queryParams]="{allowEdit: 1}": permite passar parâmetros opcionais (routerLinkos parâmetros são obrigatórios)
         fragment ou [fragment]: permite acesso (âncora) a uma parte específica do código
       -->
-      <a [routerLink]="['/servers', 5, 'edit']" [queryParams]="{allowEdit: 1}" fragment="loading" href="#" class="list-group-item"
+      <a [routerLink]="['/servers', server.id]" [queryParams]="{allowEdit: 1}" fragment="loading" href="#" class="list-group-item"
         *ngFor="let server of servers">
         {{ server.name }}
       </a>
@@ -16,6 +16,6 @@
     <button class="btn btn-primary" (click)="reloadPage()">Realod page</button>
     <app-edit-server></app-edit-server>
     <hr>
-    <app-server></app-server>
+    <!-- <app-server></app-server> -->
   </div>
 </div>

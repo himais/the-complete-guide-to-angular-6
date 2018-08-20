@@ -34,7 +34,7 @@ export class UserComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     /* - O Angular não remove o subscribe ao destruir o componente - é necessário fazê-lo manualmente */
-    this.paramsSubscribe.unsubscribe();
+    // this.paramsSubscribe.unsubscribe();
   }
 
 }
