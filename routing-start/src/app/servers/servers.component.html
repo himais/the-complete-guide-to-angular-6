@@ -1,7 +1,13 @@
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
-      <a href="#" class="list-group-item" *ngFor="let server of servers">
+      <!--
+        [routerLink]="['/servers', 5, 'edit']": adiciona rota com o valor das variáveis
+        [queryParams]="{allowEdit: 1}": permite passar parâmetros opcionais (routerLinkos parâmetros são obrigatórios)
+        fragment ou [fragment]: permite acesso (âncora) a uma parte específica do código
+      -->
+      <a [routerLink]="['/servers', 5, 'edit']" [queryParams]="{allowEdit: 1}" fragment="loading" href="#" class="list-group-item"
+        *ngFor="let server of servers">
         {{ server.name }}
       </a>
     </div>
