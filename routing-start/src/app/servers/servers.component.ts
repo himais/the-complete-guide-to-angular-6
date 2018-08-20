@@ -25,7 +25,7 @@ export class ServersComponent implements OnInit {
        - então sempre reconhecerá o path padrão: localhost
        - para reconhecer o path atual, é preciso passar o segundo argumeto do tipo ActivatedRoute que reconhece
        a rota atual. */
-    this.router.navigate(['servers'], { relativeTo: this.route });
+    // this.router.navigate(['servers'], { relativeTo: this.route });
   }
 
 }
