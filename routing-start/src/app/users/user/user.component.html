@@ -1,2 +1,8 @@
-<p>User with ID _ID_ loaded.</p>
-<p>User name is _NAME_</p>
+<p>User with ID {{user.id}} loaded.</p>
+<p>User name is {{user.name}}</p>
+
+<hr>
+<!-- 
+    Usando a property binding [routerLink], é possível passar parâmetros pelo array para a rota
+-->
+<a [routerLink]="['/users', 10, 'Anna']"> Load Anna (10)</a>
